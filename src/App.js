@@ -32,8 +32,8 @@ function App() {
     }))
   }
 
-  const showTextClick = (landmark) => {
-    landmark.showMore = !landmark.showMore;
+  const showTextClick = (data) => {
+    data.showMore = !data.showMore;
     setShowText(!showText);
   }
 
@@ -58,7 +58,7 @@ function App() {
 
         <div className='container'>
           <h3>{showMore ? description : description.substring(0, 200) + "..."}
-          <button onClick={() => showTextClick(landmark)}>{showMore ? "Показать меньше" : "Показать больше"}</button>
+          <button onClick={() => showTextClick(data)}>{showMore ? "Показать меньше" : "Показать больше"}</button>
           </h3>
         </div>
 
